@@ -1,0 +1,20 @@
+const arr = [-1, 1, 1, 2, 3, 4, 5, 1, 0];
+function findMin(arr) {
+  let min = Infinity;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  return min;
+}
+console.log(findMin(arr));
+
+let max = arr.reduce((accumulator, current) => {
+  if (current > accumulator) {
+    accumulator = current;
+  }
+  return accumulator;
+}, -Infinity);
+console.log(max);
