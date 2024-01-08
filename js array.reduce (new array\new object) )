@@ -1,0 +1,13 @@
+const arr = [
+  { firstName: "akshay", lastName: "saini", age: 2 },
+  { firstName: "aaakshay", lastName: "ssssaini", age: 2 },
+  { firstName: "kshay", lastName: "ini", age: 3 },
+];
+
+const output = arr.reduce(function (acc, cur) {
+  if (cur.age < 3) {
+    acc.push(cur.lastName);
+  }
+  return acc;
+}, []);
+console.log(output);
